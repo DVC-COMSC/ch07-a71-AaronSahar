@@ -1,13 +1,14 @@
-list = []
 average = 0
+inputvalues = input('Enter all elements values: ')
+numbers = inputvalues.split()
+for i in range(len(numbers)):
+	numbers[i] = int(numbers[i]) 
 for i in range(10):
-    list.append(int(input("Enter a number")))
-    average += list[i]
+    average += numbers[i]
 average /= 10
 for i in range(10):
-    list[i] -= average
-    if list[i] < 0:
-        list[i] *= -1
+    numbers[i] -= average
+    if numbers[i] < 0:
+        numbers[i] *= -1
 for i in range(10):
-    print(f'{list[i]:.2f}', end=' ')
-print(average)
+    print(f'{numbers[i]:.2f}', end=' ')
